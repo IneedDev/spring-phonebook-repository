@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Add form
+<br>Give contact details:
+<br><br>
+<form method="post" action="/addform" th:object="${contactForm}">
+    <b>Name</b>
+    <input  th:field="*{name}" type="text" >
+    <b>Surname</b>
+    <input  th:field="*{surname}"type="text">
+    <b>Phone number</b>
+    <input   th:field="*{phonenumber}"type="number">
+    <input type="submit" value="Submit">
+</form>
+<br><br>
+<a href="/index">Index</a>
+<a href="/contactlist">All contacts</a>
+</body>
+</html>
